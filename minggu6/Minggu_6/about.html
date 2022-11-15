@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Program Website</title>
+</head>
+
+<body style="background : url(../Minggu_6/Tech-PNG-Pic.png); background-size : cover; attachment : fixed">
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="">Download CV</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html">About</a> |
+    </nav>
+
+    <hr />
+
+    <article>
+        <h1>Bagja Satrio</h1>
+
+        <p>Hai, Saya adalah Mahasiswa Udinus <br>
+            Saya sedang belajar Ilmu Informatika/Komputer.</p>
+
+        <p>Saya mengikuti <br>
+            salah satu Organisasi yang ada di Udinus yaitu Esport Udinus 
+            </p>
+    </article>
+
+    <P>
+        <button onclick="playVid()" type="button">Play Vidio</button>
+        <button onclick="pauseVid()" type="button">Pause vidio</button>
+        <button type="button">Duration Vidio</button>
+        <button type="button">Controls on</button>
+        <button type="button">Controls off</button>
+    <p>
+
+    <div>
+        <video id="video1" width="700">
+            <source src="../Minggu_6/Apa Itu Jaringan Internet .mp4">
+        </video>
+    </div>
+
+    <script>
+        var vid = document.getElementById("video1")
+        vid.autoplay();
+        function playVid() {
+            vid.play();
+            vid.loop = true;
+        }
+        function pauseVid() {
+            vid.pause();
+        }
+        function durationVid() {
+            alert(vid.duration);
+        }
+        function controlsOn() {
+            vid.controls = false;
+            vid.load();
+        }
+        function controlsOn() {
+            vid.controls = true;
+            vid.load();
+        }
+        function controlsOff() {
+            vid.controls = false;
+            vid.load();
+        }
+        function loopStatus() {
+            alert(vid.loop);
+        }
+        function loopOn() {
+            vid.loop = true;
+            vid.load();
+        }
+        function loopOff() {
+            vid.loop = false;
+            vid.load();
+        }
+    </script>
+
+    <hr>
+    <footer style="text-align: center;">
+        <p>Copyright by; BagjaSatrio.</p>
+    </footer>
+</body>
+</html>
